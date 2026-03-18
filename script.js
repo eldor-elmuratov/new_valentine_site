@@ -100,18 +100,13 @@ function spawnBgHearts() {
 // YOUR MESSAGE — replace the text inside letterLines
 // ════════════════════════════════════════════════
 const letterLines = [
-  "Every single day I find a new reason to be grateful",
-  "that you walked into my life.",
-  "",
-  "You are the warmth I feel on cold mornings,",
-  "the smile I cannot explain,",
-  "the quiet peace I never knew I needed.",
-  "",
-  "Being loved by you is the greatest gift",
-  "I have ever received.",
-  "",
-  "No words will ever be enough,",
-  "but know this — my heart is entirely yours.",
+  "Janim Gulsevar, bayramiñ qutlı bolsın!",
+  "Muhabbatımızg'a ko'z tiymesin,",
+  "baxtımız ha'mme waqıt jarıq bolsin.",
+  "Tanısqanımızg'a 4 jıldan artıq waqıt boldı,",
+  "sonsha waqıt men menen birge bolg'anıña raxmet.",
+  "Bunnan keyin de o'mir boyı birge bolıw nasip etsin.",
+  "Janim, seni bar juregim menen qattı jaqsı ko'remen ❤️😘"
 ];
 
 function startTypewriter() {
