@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Gulsevar ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Great+Vibes&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════════════ -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="beating-heart">
+        <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 85 C50 85 5 55 5 28 C5 12 18 2 32 5 C40 7 47 13 50 18 C53 13 60 7 68 5 C82 2 95 12 95 28 C95 55 50 85 50 85Z" fill="none" stroke="#c9566b" stroke-width="3"/>
+        </svg>
+      </div>
+      <p class="loading-text">Preparing something special…</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 1 — HERO
+  ═══════════════════════════════════════════════════ -->
+  <section id="hero" class="section active">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">A special message for</p>
+      <h1 class="hero-name">Gulsevar</h1>
+      <p class="hero-quote">"Every love story is beautiful<br/>but ours is my favorite"</p>
+      <button class="hero-btn" id="openLetterBtn">
+        <span class="btn-heart">❤️</span>
+        Open your love letter
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 2 — ENVELOPE
+  ═══════════════════════════════════════════════════ -->
+  <section id="envelope-section" class="section">
+    <div class="envelope-container">
+      <h2 class="env-title">My love letter</h2>
+      <p class="env-subtitle">Click the envelope to reveal your message</p>
+
+      <div class="envelope" id="envelope">
+        <!-- Flap -->
+        <div class="envelope-flap">
+          <div class="wax-seal">
+            <div class="wax-heart">♡</div>
+          </div>
+        </div>
+        <!-- Body -->
+        <div class="envelope-body">
+          <div class="envelope-lines">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <!-- Open me text -->
+        <p class="open-me">Open me ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 3 — LOVE LETTER
+  ═══════════════════════════════════════════════════ -->
+  <section id="letter-section" class="section">
+    <div class="letter-bg-hearts" id="letterBgHearts"></div>
+    <div class="letter-paper">
+      <!-- Corner hearts -->
+      <div class="corner-heart tl">♡</div>
+      <div class="corner-heart tr">♡</div>
+      <div class="corner-heart bl">♡</div>
+      <div class="corner-heart br">♡</div>
+
+      <h3 class="letter-heading">My dearest love,</h3>
+      <div class="letter-body" id="letterBody"></div>
+      <div class="letter-signature" id="letterSignature"></div>
+    </div>
+    <button class="continue-btn hidden" id="continueBtn">
+      ❤️ Continue to our memories
+    </button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 4 — MEMORIES
+  ═══════════════════════════════════════════════════ -->
+  <section id="memories-section" class="section">
+    <h2 class="section-title">Our Memories</h2>
+    <div class="memories-grid">
+
+      <div class="memory-card" data-date="July 7, 2024" data-caption="Tayarliqtan birge qaytqan waqitimiz">
+        <img src="images/memory1.jpg" alt="Memory 1" onerror="this.style.display='none';this.parentElement.classList.add('no-img')" />
+        <div class="memory-overlay">
+          <p class="memory-date">February 14, 2023</p>
+          <p class="memory-caption">Tayarliqtan birge qaytqan waqitimiz ✨</p>
+        </div>
+      </div>
+
+      <div class="memory-card" data-date="December 31, 2024" data-caption="Taza jilda aylang'animiz">
+        <img src="images/memory2.jpg" alt="Memory 2" onerror="this.style.display='none';this.parentElement.classList.add('no-img')" />
+        <div class="memory-overlay">
+          <p class="memory-date">June 21, 2023</p>
+          <p class="memory-caption">Taza jilda aylang'animiz 🎇</p>
+        </div>
+      </div>
+
+      <div class="memory-card" data-date="January 25, 2026" data-caption="Tashkent city mallda aylang'animiz">
+        <img src="images/memory3.jpg" alt="Memory 3" onerror="this.style.display='none';this.parentElement.classList.add('no-img')" />
+        <div class="memory-overlay">
+          <p class="memory-date">December 31, 2023</p>
+          <p class="memory-caption">Tashkent city mallda aylang'animiz 🎆</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       MODAL — Memory fullscreen
+  ═══════════════════════════════════════════════════ -->
+  <div id="memoryModal" class="modal hidden">
+    <button class="modal-close" id="modalClose">✕</button>
+    <img id="modalImg" src="" alt="" />
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 5 — OUR SONG
+  ═══════════════════════════════════════════════════ -->
+  <section id="song-section" class="section">
+    <h2 class="section-title">Our Songs</h2>
+    <div class="player-wrapper">
+
+      <!-- Left: Player -->
+      <div class="player-left">
+        <div class="player-cover" id="playerCover">
+          <div class="cover-placeholder">♪</div>
+        </div>
+        <div class="player-info">
+          <p class="player-song-title" id="playerTitle">Song Title</p>
+          <p class="player-artist" id="playerArtist">Artist</p>
+        </div>
+        <div class="player-progress-wrap">
+          <span class="time" id="currentTime">0:00</span>
+          <div class="progress-bar" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+            <div class="progress-thumb" id="progressThumb"></div>
+          </div>
+          <span class="time" id="totalTime">0:00</span>
+        </div>
+        <div class="player-controls">
+          <button class="ctrl-btn" id="prevBtn" title="Previous">
+            <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+          </button>
+          <button class="ctrl-btn play-btn" id="playBtn" title="Play/Pause">
+            <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="pause-icon hidden" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          </button>
+          <button class="ctrl-btn" id="nextBtn" title="Next">
+            <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zm2-8.14 5.14 3.64L8 17.14V9.86zM16 6h2v12h-2z"/></svg>
+          </button>
+        </div>
+        <div class="volume-wrap">
+          <svg class="vol-icon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.8" />
+        </div>
+      </div>
+
+      <!-- Right: Playlist -->
+      <div class="player-right">
+        <div class="playlist" id="playlist"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p>Made with love by <span>Eldor</span></p>
+  </footer>
+
+  <!-- Hidden audio element -->
+  <audio id="audioPlayer"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
